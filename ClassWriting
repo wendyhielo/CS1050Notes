@@ -1,0 +1,114 @@
+/**
+    Pet class (complete comments)
+    @author: Wendy
+    @since: 3/2021
+
+*/
+class Pet
+{
+   // keep track of the name, age, weight, type of animal, and breed of the pet
+    private String name;
+    private int age;
+    private int weight;
+    private String type;
+    private String breed;
+    
+   // Write 2 constructors, accessor (get) methods, and a toString method. Use good commenting.
+    public Pet()
+    {
+        name = "";
+        age = 0;
+        weight = 0;
+        type = "";
+        breed = "";
+    }
+    
+    public Pet(String initName, int initAge, int initWeight, String initType, String initBreed)
+    {
+        name = initName;
+        age = initAge;
+        weight = initWeight;
+        type = initType;
+        breed = initBreed;
+    }
+    
+    //toString methods
+    public String toString()
+   {
+     return name + ": " + age + ", " + weight + ", " + type + ", " + breed;
+   }
+    
+    //Getter methods
+    public String getName()
+   {
+      return name;
+   }
+    
+    public int getAge()
+   {
+      return age;
+   }
+    
+    public int getWeight()
+   {
+      return weight;
+   }
+    
+    public String getType()
+   {
+      return type;
+   }
+    
+    public String getBreed()
+   {
+      return breed;
+   }
+    
+    //Setter methods
+    public void setName(String newName)
+   {
+     name = newName;
+   }
+    
+    public void setAge(int newAge)
+   {
+     age = newAge;
+   }
+    
+    public void setWeight(int newWeight)
+   {
+     weight = newWeight;
+   }
+    
+    public void setType(String newType)
+   {
+     type = newType;
+   }
+    
+   public void setBreed(String newBreed)
+   {
+     breed = newBreed;
+   }
+    
+   // Don't forget to complete the main method in the TesterClass below!
+}
+
+public class TesterClass
+{
+   // main method for testing
+   public static void main(String[] args)
+   {
+      // Create 3 Pet objects and test all your methods
+       Pet p1 = new Pet();
+       
+       Pet p2 = new Pet("Max", 5, 15, "Dog", "Maltipoo");
+       System.out.println("Name:" +  p2.getName());
+       System.out.println("Age:" +  p2.getAge());
+       System.out.println("Weight:" +  p2.getWeight());
+       System.out.println("Type:" +  p2.getType());
+       System.out.println("Breed:" +  p2.getBreed());
+       
+       Pet p3 = new Pet("Nala", 1, 7, "Dog", "Maltipoo");
+       System.out.println(p3);
+   }
+ }
